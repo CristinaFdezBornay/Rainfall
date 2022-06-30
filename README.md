@@ -23,12 +23,3 @@
 **EIP:** appelé Pointeur d’Instruction; il contient l’adresse de la prochaine instruction que le processeur doit exécuter.
 
 **EFALGS:** contient des indicateurs, des interrupteurs, des drapeaux (flags) essentiellement utilisés pour des comparaisons, mais pas uniquement.
-
-EAX: accumulateur
-EBX: base
-ECX: compteur
-EDX: données
-ESI: source index
-EDI: destination index
-EBP: base pointer
-ESP: stack pointer
