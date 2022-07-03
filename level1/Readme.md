@@ -4,8 +4,8 @@
 
 In this level we have to:
 1. When launching the program `./level1` it waits for an input; by passing "aaaa" it exist without any problem but if the input is much longer it segfaults!
-2. By disambling the main we see that there is a call to the function `gets` which is probably the one causing the segfault. This can easily be exploited by doing a buffer overflow and understanding where is each register saved in memory. [Here I spent HOURS looking for how to exploit the buffer overflow and pass a shellcode, but no...]
-3. After the small parenthesis I've realised that when looking at what is in the binary but not in the main we discover a function `run` which is not called by the main. By looking the objdump we see that this function has a call to `system` and when looking at the hexdump we see some strings as "Good... Wait what?" and "/bin/sh".
+2. By disassembling the main we see that there is a call to the function `gets` which is probably the one causing the segfault. This can easily be exploited by doing a buffer overflow and understanding where is each register saved in memory. [Here I spent HOURS looking for how to exploit the buffer overflow and pass a shellcode, but no...]
+3. After the small parenthesis I've realized that when looking at what is in the binary but not in the main we discover a function `run` which is not called by the main. By looking the objdump we see that this function has a call to `system` and when looking at the hexdump we see some strings as "Good... Wait what?" and "/bin/sh".
 4. We are going to try to access the function `run` by exploiting the buffer overflow that we talked about before. By having a look at the stack after calling `gets` and passing a long string of "a" (61 in hex) we will have something like this:
 
 ```
