@@ -12,7 +12,7 @@ In this level we have to:
 To find the solution:
 ```
 [GDB] pattern create 200 => Stopped reason: SIGSEGV || <ADDRESS> in ?? ()
-[GDB] patern offset <ADDRESS> => Gives the offset of EIP
+[GDB] pattern offset <ADDRESS> => Gives the offset of EIP
 [GDB] disas n
 ```
 
