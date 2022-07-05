@@ -9,22 +9,18 @@ void    m(...) {
 }
 
 void    main(char **argv, int argc) {
-  void    *p1;
-  void    *p2;
-  void    *p3;
-  in      fd;
+  char  *p1;
+  char  *p2;
+  char  *p3;
+  int   fd;
+  char  *c;
   
-  p1 = (void *)malloc(8);
-  *p1 = 1;
+  p1 = malloc(8);
   p2 = malloc(8);
-  p1[1] = p2;
-  p3 = (void *)malloc(8);
-  *p3 = 2;
-  p2 = malloc(8);
-  p3[1] = p2;
+  p3 = malloc(8);
 
-  strcpy((char *)p1[1],*(char **)(argc + 4));
-  strcpy((char *)p3[1],*(char **)(argc + 8));
+  strcpy(p1, argv[1]);
+  strcpy(p3, argv[2]);
 
   fd = fopen("/home/user/level8/.pass","r");
   fgets(c, 0x44, fd);
